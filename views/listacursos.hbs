@@ -1,0 +1,16 @@
+{{>header}}
+        <!-- Content here -->
+        {{{mensaje}}}
+        A continuación se presenta la lista de cursos creados hasta la fecha
+        <div style="margin:15px 0">
+                {{{tablaCursos}}}
+        </div>
+
+        <form action="/listadocursos" method="POST"> 
+                <div class="row" style="margin-top:75px">
+                        <div class="col-md-3"></div>
+                        {{{cambioEstado}}}
+                </div>
+        </form>
+        
+{{>footer}}

@@ -1,0 +1,62 @@
+{{>header}}
+        <!-- Content here -->
+        <br/>
+        <h3 class="text-center">Formulario para ingresar un nuevo curso</h3>
+        <div class="text-center">Utilice este formulario para ingresar la información de un nuevo curso</div>
+        <br>
+        <form action="/listacursos" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="id">ID:</label>
+                        <input type="number" class="form-control" id="id" name="id" placeholder="ID del curso" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del curso" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="modalidad">Modalidad:</label>
+                        <select class="form-control" id="modalidad" name="modalidad">
+                            <option value="">Seleccionar</option>
+                            <option value="Presencial">Presencial</option>
+                            <option value="Virtual">Virtual</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="valor">Valor:</label>
+                        <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor del curso" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="id">Descripción:</label>
+                        <textarea id="descripcion" class="form-control" name="descripcion" required></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="intensidad">Intensidad horaria:</label>
+                        <input type="number" class="form-control" id="intensidad" name="intensidad" placeholder="Instensidad del curso">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success">Enviar</button>
+            </div>
+        </form>
+
+{{>footer}}

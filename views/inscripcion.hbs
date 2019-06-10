@@ -1,0 +1,54 @@
+{{>header}}
+        <!-- Content here -->
+        <br>
+        <h3 class="text-center">{{Titulo}}</h3>
+        <div class="text-center">{{Subtitulo}}</div>
+        <br>
+        <form action="/guardarinscripcion" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="documento">Documento de identidad:</label>
+                        <input type="number" class="form-control" id="documento" name="documento" placeholder="Documento" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cursos">Cursos disponibles:</label>
+                        <select id="cursos" class="form-control" name="cursos" required>{{{listaCursos}}}</select>
+                    </div>
+                </div>
+                <div class="col-md-6">.</div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success">Enviar</button>
+            </div>
+        </form>
+
+{{>footer}}
