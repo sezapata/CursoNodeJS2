@@ -198,7 +198,7 @@ const consultarNombreCurso = (idCurso) => {
 
 const listadoInscriptos = () => {
     try {
-        listaInscriptos = require('../inscriptos.json');
+        listaInscriptos = JSON.parse(fs.readFileSync('./inscriptos.json'));
     } catch {
         listaInscriptos = [];
     }
